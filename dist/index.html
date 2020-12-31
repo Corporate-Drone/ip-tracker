@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+    integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+    crossorigin=""></script>
+
+  <title>IP Address Tracker</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="imgs/pattern-bg.png" alt="" class="background">
+    <div id="map"></div>
+    <h1>IP Address Tracker</h1>
+    <form action="#">
+      <input type="text" placeholder="Search for any IP address" id="ip-submit">
+      <button id="submit"><img src="imgs/icon-arrow.svg" alt=""></button>
+    </form>
+    <div class="info">
+      <div class="category" id="address">
+        <p class="title">IP ADDRESS</p>
+        <p class="data" id="ip-data">-</p>
+      </div>
+      <div class="border"></div>
+      <div class="category" id="location">
+        <p class="title">LOCATION</p>
+        <p class="data" id="location-data">-</p>
+      </div>
+      <div class="border"></div>
+      <div class="category" id="timezone">
+        <p class="title">TIMEZONE</p>
+        <p class="data" id="timezone-data">-</p>
+      </div>
+      <div class="border"></div>
+      <div class="category" id="isp">
+        <p class="title">ISP</p>
+        <p class="data" id="isp-data">-</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>

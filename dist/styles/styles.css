@@ -1,0 +1,149 @@
+:root {
+    --min-width: 260px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.background {
+    background-image: url('../imgs/pattern-bg.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    min-width: var(--min-width);
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: var(--min-width);
+}
+
+h1 {
+    color: white;
+    position: absolute;
+}
+
+form {
+    position: absolute;
+    top: 100px;
+}
+
+input[type=text] {
+    padding: 2em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+#submit {
+    padding: 2em;
+    margin-left: -5.5px;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: black;
+    color: white;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: white;
+    width: 75%;
+    position: absolute;
+    top: 200px;
+    min-width: var(--min-width);
+}
+
+.title {
+    font-size: 0.8em;
+    color: hsl(0, 0%, 59%);
+}
+
+.data {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#map { 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+}
+
+/* If the screen size is 799px or less */
+@media screen and (max-width: 799px) {
+    .background {
+        height: 35vh;
+    }
+
+    h1 {
+        top: 0;
+        font-size: 2em;
+    }
+
+    .info {
+        flex-direction: column;
+        text-align: center;
+        max-width: 350px;
+    }
+    
+    .data {
+        margin-top: -10%;
+        margin-bottom: -5%;
+        font-size: 2em;
+    }
+
+    #map {
+        height: 65vh; 
+    }
+}
+
+/* If the screen size is 800px or more */
+@media screen and (min-width: 800px) {
+    .background {
+        height: 30vh;
+    }
+
+    h1 {
+        top: -30px;
+        font-size: 3em;
+    }
+
+    input[type=text] {
+        width: 600px;
+    }
+
+    form {
+    
+    }
+
+    .info {
+        flex-direction: row;
+        text-align: center;
+        height: 150px;
+        justify-content: space-evenly;
+    }
+
+    .category {
+        margin: 1em;
+        /* padding-right: 1em; */
+    }
+
+    .border {
+        border: 1px solid rgb(241, 236, 236);
+        height: 60%;
+    }
+
+    #map {
+        height: 70vh;
+    }
+}
